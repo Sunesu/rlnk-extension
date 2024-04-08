@@ -1,0 +1,47 @@
+{
+    "manifest_version": 2,
+    "name": "rlnk",
+    "version": "1.0",
+    "author": "Sunesu",
+    "description": "Shortcuts for roblox games. You need to have rlnk installed for this extension to work.",
+    "homepage_url": "https://rlnk.app/extension",
+
+    "browser_action": {
+        "default_icon": {
+            "48": "icons/rlnk.png"
+        },
+        "default_popup": "app.html",
+        "default_title": "rlnk"
+    },
+  
+    "icons": {
+      "48": "icons/rlnk.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "cookies",
+        "*://*.roblox.com/"
+    ],
+
+    "background": {
+        "scripts": ["background-script.js"],
+        "persistent": false,
+        "type": "module"
+    },
+      
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.roblox.com/*"],
+        "js": ["rlnk.js"]
+      }
+    ],
+
+    "applications": {
+        "gecko": {
+            "id": "addon@rlnk.app"
+        }
+    }
+}
+  

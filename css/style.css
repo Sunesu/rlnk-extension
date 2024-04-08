@@ -1,0 +1,244 @@
+
+:root{
+    --primary: #dd00fa;
+    --secondary: #6909c2;
+
+    --danger-primary: #fa0000;
+    --danger-secondary: #c20909;
+
+    --text: #fff;
+    --background: #000000;
+    --transparent-background: #00000022;
+    --top-bg: #26003b;
+
+    --logo-invert: 100%;
+}
+
+.light-theme {
+    --primary: #dd00fa;
+    --secondary: #6909c2;
+
+    --text: black;
+    --background: white;
+    --transparent-background: #ffffff22;
+    --top-bg: #c4c4c4;
+
+    --logo-invert: 0%;
+}
+
+body{
+    margin: 0;
+    background: #26003b linear-gradient(0deg,var(--background),var(--top-bg));
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* font-family: 'Open Sans', 'Roboto', cursive, 'Helvetica Neue', sans-serif; */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    color: var(--text);
+    color-scheme: dark;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+h1,p{
+    margin: 0;
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+p{
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+a.colored{
+    color: var(--primary);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row > * {
+    margin-right: 1rem;
+}
+
+main{
+    width: 180px !important;
+    margin: 0 auto;
+    /* min-height: calc(100vh - 3rem); */
+}
+
+.flex-v-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.darrow{
+    position: absolute;
+    bottom: 0rem;
+    left: calc(50% - 1.75rem);
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(0deg,var(--primary),var(--background));
+    clip-path: url('#darrow-path');
+    animation: 2s arrowani infinite alternate ease-in-out;
+    cursor: pointer;
+}
+
+.download-button{
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,var(--secondary),var(--primary));
+    background-size: 150%;
+    transition: .2s linear;
+}
+
+.download-button:hover{
+    background-position: -3rem 0;
+    text-decoration: none;
+    box-shadow: 0 0 15px var(--primary);
+    /* scale: 1.05; */
+    transform: scale(1.05);
+}
+
+.donate-button{
+    color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,#eb9f12,#ffd92d);
+    background-size: 152%;
+    transition: .2s linear;
+}
+
+.donate-button:hover{
+    background-position: -3rem 0;
+    text-decoration: none;
+    box-shadow: 0 0 15px #eb9f12;
+    /* scale: 1.05; */
+    transform: scale(1.05);
+}
+
+.h-center{
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h-center * {
+    text-align: center;
+}
+
+footer, .ad{
+    padding: 1rem;
+    background-color: #000;
+    color: #757575;
+    text-align: center;
+    /* box-shadow: 0px 0px 40px #5c5c5c; */
+    /* border-top: 1px solid #3d3d3d; */
+}
+
+footer a {
+    color: #fff;
+}
+
+::selection{
+    background-color: var(--primary);
+}
+
+
+.big-h{
+    text-align: center; 
+    font-size: 15em; 
+    margin-bottom: 0;
+}
+
+img {
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button{
+    background: linear-gradient(45deg,var(--secondary),var(--primary));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 8rem;
+    height: 2rem;
+    transition: linear 0.2s;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    display: none;
+    font-weight: 500;
+}
+
+button.danger {
+    background: linear-gradient(45deg,var(--danger-secondary),var(--danger-primary));
+    background-size: 400% 400%;
+}
+
+button:hover,
+/* input[type=text]:hover, */
+select:hover{
+    background-position: -8rem 0;
+}
+
+select{
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #000;
+    color: #ffffff;
+    min-height: 2rem;
+    max-height: 12rem;
+    outline: none;
+    border: 2px solid var(--secondary);
+    margin-bottom: .5rem;
+}
+
+select:disabled{
+    cursor: not-allowed;
+}
+
+select#accounts {
+    display: none;
+}
+
+option{
+    background: var(--background);
+}
+
+select:focus option:checked {
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    color: #fff !important;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: .3rem;
+}

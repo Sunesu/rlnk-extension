@@ -38,9 +38,10 @@
       }
     ],
 
-    "applications": {
+    "browser_specific_settings": {
         "gecko": {
-            "id": "addon@rlnk.app"
+            "id": "addon@rlnk.app",
+            "update_url": "https://rlnk.app/extension/updates.json"
         }
     }
 }

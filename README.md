@@ -9,7 +9,7 @@ A browser extension to do fancy rlnk things inside your web browser
 
 ## Installation
 
-**First, make sure that you have at least [rlnk v1.0.4](/download/latest/rlnk_install.exe) installed!**
+**First, make sure that you have at least [rlnk v1.0.4](https://rlnk.app/download/latest/rlnk_install.exe) installed!**
 
 ## Firefox
 - coming soon (I mean it's not signed yet, so you'll need a firefox developer edition to install it)

@@ -12,16 +12,18 @@ A browser extension to do fancy rlnk things straight from your web browser!
 **First, make sure that you have at least [rlnk v1.0.4](https://github.com/Sunesu/rlnk/releases/tag/v1.0.4) installed!**
 
 ## Firefox
-- coming soon (I mean it's not signed yet, so you'll need a firefox developer edition to install it)
+1. Download the extension
+2. Follow the post-installation steps
 
 ## Chromium based browsers
-1. Extract the .xpi file that you just downloaded (it's just a .zip file, you can change its extension)
-2. Navigate to `chrome://extensions/`
-3. Enable developer mode in the top right corner
-4. Click `Load unpacked` button
-5. Select your extension folder where you have just extracted the `manifest.json` file
+1. Download the extension
+2. Extract the .xpi file that you just downloaded (it's just a .zip file, you can change its extension)
+3. Navigate to \`chrome://extensions/\`
+4. Enable developer mode in the top right corner
+5. Click \`Load unpacked\` button
+6. Select your extension folder where you have just extracted the \`manifest.json\` file
 
-Post installation:
+## Post installation:
 1. Run the extension
 2. Click on the big rlnk logo, a popup should appear
 3. Check `Always allow this extension to open rlnk links`

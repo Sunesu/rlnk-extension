@@ -1,5 +1,5 @@
 # rlnk - the extension
-A browser extension to do fancy rlnk things inside your web browser
+A browser extension to do fancy rlnk things straight from your web browser!
 
 - Create desktop shortcuts for your favorite roblox games
 - Copy your cookie easily

@@ -80,6 +80,7 @@ swap_cookie_button.addEventListener('click', async ()=>{
             var accountOption = document.createElement('option');
             accountOption.value = account.userId;
             accountOption.innerText = account.displayName;
+            accounts_select.appendChild(accountOption);
             // accounts_select.innerHTML += `<option value="${account.userId}">${account.displayName}</option>`
         }
         // hide swap cookie button & show select

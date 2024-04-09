@@ -73,14 +73,18 @@ swap_cookie_button.addEventListener('click', async ()=>{
     .then(res=>res.json())
     .then((res)=>{
         // show them to the user
-        accounts_select.innerHTML += `<option value="0"></option>`
+        var emptyOption = document.createElement('option');
+        emptyOption.value = '0';
+        accounts_select.appendChild(emptyOption);
         for (const account of res) {
-            accounts_select.innerHTML += `<option value="${account.userId}">${account.displayName}</option>`
+            var accountOption = document.createElement('option');
+            accountOption.value = account.userId;
+            accountOption.innerText = account.displayName;
+            // accounts_select.innerHTML += `<option value="${account.userId}">${account.displayName}</option>`
         }
         // hide swap cookie button & show select
         swap_cookie_button.style.display = "none";
         accounts_select.style.display = "inline-block";
-        // accounts_select.dispatchEvent(new MouseEvent('mousedown'));
         accounts_select.size = res.length;
 
         // wait for the user to select account
@@ -136,7 +140,6 @@ document.querySelector('img').addEventListener('click',()=>{
 
 window.addEventListener("blur", function(){
     // try to shutdown the rlnk server
-    // known issue: sometimes it won't shutdown a rlnk server
     fetch(`http://localhost:4968/shutdown`,{
         headers: {
             authorization: ACCESS_TOKEN
